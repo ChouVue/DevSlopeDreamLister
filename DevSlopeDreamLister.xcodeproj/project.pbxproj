@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53F69C461F956331002F12B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C451F956331002F12B9 /* AppDelegate.swift */; };
-		53F69C481F956331002F12B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C471F956331002F12B9 /* ViewController.swift */; };
+		53F69C481F956331002F12B9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C471F956331002F12B9 /* MainVC.swift */; };
 		53F69C4B1F956331002F12B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F69C491F956331002F12B9 /* Main.storyboard */; };
 		53F69C4E1F956331002F12B9 /* DevSlopeDreamLister.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C4C1F956331002F12B9 /* DevSlopeDreamLister.xcdatamodeld */; };
 		53F69C501F956331002F12B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F69C4F1F956331002F12B9 /* Assets.xcassets */; };
@@ -21,12 +21,13 @@
 		53F69C7B1F9569FE002F12B9 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C731F9569FE002F12B9 /* Item+CoreDataProperties.swift */; };
 		53F69C7C1F9569FE002F12B9 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C741F9569FE002F12B9 /* Image+CoreDataClass.swift */; };
 		53F69C7D1F9569FE002F12B9 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C751F9569FE002F12B9 /* Image+CoreDataProperties.swift */; };
+		53F9BF461F9697DD00480EFA /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9BF451F9697DD00480EFA /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53F69C421F956331002F12B9 /* DevSlopeDreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevSlopeDreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F69C451F956331002F12B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53F69C471F956331002F12B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53F69C471F956331002F12B9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		53F69C4A1F956331002F12B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53F69C4D1F956331002F12B9 /* DevSlopeDreamLister.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DevSlopeDreamLister.xcdatamodel; sourceTree = "<group>"; };
 		53F69C4F1F956331002F12B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		53F69C731F9569FE002F12B9 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		53F69C741F9569FE002F12B9 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		53F69C751F9569FE002F12B9 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		53F9BF451F9697DD00480EFA /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,7 @@
 				53F69C6B1F9567CF002F12B9 /* View */,
 				53F69C6A1F9567C9002F12B9 /* Model */,
 				53F69C451F956331002F12B9 /* AppDelegate.swift */,
-				53F69C471F956331002F12B9 /* ViewController.swift */,
+				53F69C471F956331002F12B9 /* MainVC.swift */,
 				53F69C491F956331002F12B9 /* Main.storyboard */,
 				53F69C4F1F956331002F12B9 /* Assets.xcassets */,
 				53F69C511F956331002F12B9 /* LaunchScreen.storyboard */,
@@ -89,10 +91,10 @@
 		53F69C6A1F9567C9002F12B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				53F69C6E1F9569FE002F12B9 /* Store+CoreDataClass.swift */,
-				53F69C701F9569FE002F12B9 /* ItemType+CoreDataClass.swift */,
-				53F69C721F9569FE002F12B9 /* Item+CoreDataClass.swift */,
 				53F69C741F9569FE002F12B9 /* Image+CoreDataClass.swift */,
+				53F69C721F9569FE002F12B9 /* Item+CoreDataClass.swift */,
+				53F69C701F9569FE002F12B9 /* ItemType+CoreDataClass.swift */,
+				53F69C6E1F9569FE002F12B9 /* Store+CoreDataClass.swift */,
 				53F69C6D1F9567DF002F12B9 /* Generated */,
 			);
 			name = Model;
@@ -101,6 +103,7 @@
 		53F69C6B1F9567CF002F12B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53F9BF451F9697DD00480EFA /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -197,7 +200,8 @@
 			files = (
 				53F69C781F9569FE002F12B9 /* ItemType+CoreDataClass.swift in Sources */,
 				53F69C771F9569FE002F12B9 /* Store+CoreDataProperties.swift in Sources */,
-				53F69C481F956331002F12B9 /* ViewController.swift in Sources */,
+				53F69C481F956331002F12B9 /* MainVC.swift in Sources */,
+				53F9BF461F9697DD00480EFA /* MaterialView.swift in Sources */,
 				53F69C761F9569FE002F12B9 /* Store+CoreDataClass.swift in Sources */,
 				53F69C461F956331002F12B9 /* AppDelegate.swift in Sources */,
 				53F69C791F9569FE002F12B9 /* ItemType+CoreDataProperties.swift in Sources */,
