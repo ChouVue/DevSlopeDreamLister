@@ -21,6 +21,7 @@
 		53F69C7B1F9569FE002F12B9 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C731F9569FE002F12B9 /* Item+CoreDataProperties.swift */; };
 		53F69C7C1F9569FE002F12B9 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C741F9569FE002F12B9 /* Image+CoreDataClass.swift */; };
 		53F69C7D1F9569FE002F12B9 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F69C751F9569FE002F12B9 /* Image+CoreDataProperties.swift */; };
+		53F760021F97AA67005FCB8D /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F760011F97AA67005FCB8D /* ItemCell.swift */; };
 		53F9BF461F9697DD00480EFA /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9BF451F9697DD00480EFA /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		53F69C731F9569FE002F12B9 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		53F69C741F9569FE002F12B9 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		53F69C751F9569FE002F12B9 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		53F760011F97AA67005FCB8D /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		53F9BF451F9697DD00480EFA /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				53F9BF451F9697DD00480EFA /* MaterialView.swift */,
+				53F760011F97AA67005FCB8D /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F760021F97AA67005FCB8D /* ItemCell.swift in Sources */,
 				53F69C781F9569FE002F12B9 /* ItemType+CoreDataClass.swift in Sources */,
 				53F69C771F9569FE002F12B9 /* Store+CoreDataProperties.swift in Sources */,
 				53F69C481F956331002F12B9 /* MainVC.swift in Sources */,
