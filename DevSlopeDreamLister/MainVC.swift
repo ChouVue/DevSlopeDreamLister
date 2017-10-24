@@ -22,21 +22,52 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //generateTestData()
+        attemptFetch()
+        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
+        
+        configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+        
+        return cell
+    }
+    
+    func configureCell(cell: ItemCell, indexPath: NSIndexPath)
+    {
+        let item = controller.object(at: indexPath as IndexPath)
+        cell.configureCell(item: item)
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        if let sections = controller.sections
+        {
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
+        
         return 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int
     {
+        if let sections = controller.sections
+        {
+            return sections.count
+        }
+        
         return 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 150
     }
     
     func attemptFetch()
@@ -54,6 +85,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         fetchRequest.sortDescriptors = [dateSort]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        self.controller = controller
         
         //Fetch result can fail, so do a Do and Catch syntax incase
         do
@@ -105,7 +138,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
                 if let indexPath = indexPath
                 {
                     let cell = tableView.cellForRow(at: indexPath) as! ItemCell
-                    //Update the cell data
+                    configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
                 }
                 break
             //1.) Deleting it out of it current place
@@ -123,7 +156,25 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
     }
     
-    
+    func generateTestData()
+    {
+        let item = Item(context: context)
+        item.title = "Vue Mobile App Company"
+        item.price = 50000000
+        item.details = "A great successful business worth $50,000,000 created by Chou Vue, CEO & Chairman of the company."
+        
+        let item2 = Item(context: context)
+        item2.title = "Three Kingdom Warlords"
+        item2.price = 10000000
+        item2.details = "First mobile app game develope by VMAC (Vue Mobile App Company). Make up to $10,000,000 a year."
+        
+        let item3 = Item(context: context)
+        item3.title = "Red Lamborghini"
+        item3.price = 200000
+        item3.details = "First car bought by Chou Vue (CEO & Chairman) after the successful business of VMAC."
+        
+        ad.saveContext()
+    }
     
     
     
