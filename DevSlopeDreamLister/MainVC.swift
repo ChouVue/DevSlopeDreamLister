@@ -86,6 +86,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
+        controller.delegate = self 
+        
         self.controller = controller
         
         //Fetch result can fail, so do a Do and Catch syntax incase
@@ -158,22 +160,22 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     func generateTestData()
     {
-        let item = Item(context: context)
-        item.title = "Vue Mobile App Company"
-        item.price = 50000000
-        item.details = "A great successful business worth $50,000,000 created by Chou Vue, CEO & Chairman of the company."
-        
-        let item2 = Item(context: context)
-        item2.title = "Three Kingdom Warlords"
-        item2.price = 10000000
-        item2.details = "First mobile app game develope by VMAC (Vue Mobile App Company). Make up to $10,000,000 a year."
-        
-        let item3 = Item(context: context)
-        item3.title = "Red Lamborghini"
-        item3.price = 200000
-        item3.details = "First car bought by Chou Vue (CEO & Chairman) after the successful business of VMAC."
-        
-        ad.saveContext()
+//        let item = Item(context: context)
+//        item.title = "Vue Mobile App Company"
+//        item.price = 50000000
+//        item.details = "A great successful business worth $50,000,000 created by Chou Vue, CEO & Chairman of the company."
+//        
+//        let item2 = Item(context: context)
+//        item2.title = "Three Kingdom Warlords"
+//        item2.price = 10000000
+//        item2.details = "First mobile app game develope by VMAC (Vue Mobile App Company). Make up to $10,000,000 a year."
+//        
+//        let item3 = Item(context: context)
+//        item3.title = "Red Lamborghini"
+//        item3.price = 200000
+//        item3.details = "First car bought by Chou Vue (CEO & Chairman) after the successful business of VMAC."
+//        
+//        ad.saveContext()
     }
     
     
