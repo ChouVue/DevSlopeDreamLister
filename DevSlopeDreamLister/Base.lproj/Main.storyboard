@@ -38,7 +38,7 @@
                                 <rect key="frame" x="31" y="134" width="258" height="434"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="6G7-bB-dhl" customClass="ItemCell" customModule="DevSlopeDreamLister" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="6G7-bB-dhl" customClass="ItemCell" customModule="DevSlopeDreamLister" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="258" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6G7-bB-dhl" id="14k-j1-8gT">
@@ -46,7 +46,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PP7-yH-Xq8">
-                                                    <rect key="frame" x="8" y="8" width="328" height="133.5"/>
+                                                    <rect key="frame" x="8" y="8" width="242" height="133.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redlamborghini" translatesAutoresizingMaskIntoConstraints="NO" id="7Ef-mV-LEc">
                                                             <rect key="frame" x="8" y="32" width="70" height="70"/>
@@ -56,7 +56,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Lamborghini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-IB-1ob">
-                                                            <rect key="frame" x="86" y="8" width="234" height="20"/>
+                                                            <rect key="frame" x="86" y="8" width="148" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="ND4-QF-j09"/>
                                                             </constraints>
@@ -65,7 +65,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1b4-Bk-xma">
-                                                            <rect key="frame" x="86" y="36" width="234" height="20"/>
+                                                            <rect key="frame" x="86" y="36" width="148" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="2uE-G1-EWZ"/>
                                                             </constraints>
@@ -74,7 +74,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Have A Red Lamborghini!!!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxS-Oc-O2B">
-                                                            <rect key="frame" x="84" y="64" width="236" height="62"/>
+                                                            <rect key="frame" x="84" y="64" width="150" height="62"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -108,6 +108,9 @@
                                                 <constraint firstItem="PP7-yH-Xq8" firstAttribute="leading" secondItem="14k-j1-8gT" secondAttribute="leading" constant="8" id="oMT-ba-yh6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="detailLbl" destination="SxS-Oc-O2B" id="UKe-Ua-eZH"/>
                                             <outlet property="priceLbl" destination="1b4-Bk-xma" id="UY4-Em-7ED"/>
@@ -140,7 +143,7 @@
                     <connections>
                         <outlet property="segmentController" destination="oFT-e4-vQy" id="gL3-0U-jfe"/>
                         <outlet property="tableView" destination="Bdd-KG-4qF" id="hro-9Z-YiP"/>
-                        <segue destination="feF-xc-T3a" kind="show" identifier="ItemDetailsVC" id="xIk-N4-sd2"/>
+                        <segue destination="feF-xc-T3a" kind="show" identifier="ItemDetails" id="h9D-7s-uah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -301,6 +304,6 @@
         <image name="redlamborghini" width="256" height="134"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xIk-N4-sd2"/>
+        <segue reference="h9D-7s-uah"/>
     </inferredMetricsTieBreakers>
 </document>
