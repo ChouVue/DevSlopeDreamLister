@@ -103,9 +103,24 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         //This is to help sort Item out
                                             //"created" is from our time stamp from our data model from "Item"
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
-    
-        //This will expect an array because you can have more than 1
-        fetchRequest.sortDescriptors = [dateSort]
+        
+        let priceSort = NSSortDescriptor(key: "price", ascending: true)
+        
+        let titleSort = NSSortDescriptor(key: "title", ascending: true)
+        
+        if segmentController.selectedSegmentIndex == 0
+        {
+            //This will expect an array because you can have more than 1
+            fetchRequest.sortDescriptors = [dateSort]
+        }
+        else if segmentController.selectedSegmentIndex == 1
+        {
+            fetchRequest.sortDescriptors = [priceSort]
+        }
+        else if segmentController.selectedSegmentIndex == 2
+        {
+            fetchRequest.sortDescriptors = [titleSort]
+        }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -124,6 +139,14 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             print("\(error)")
         }
     }
+    
+    @IBAction func segmentChanged(_ sender: AnyObject)
+    {
+        attemptFetch()
+        
+        tableView.reloadData()
+    }
+    
 
     //This method here is for when the table view is about to update,
     //This will start to listen for changes and will handle that for you
